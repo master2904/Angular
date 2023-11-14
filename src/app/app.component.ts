@@ -7,12 +7,11 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.scss']
   })
 export class AppComponent implements OnInit{
-  public rol = null;
-  nombre=null;
-  // constructor(private perfil:PerfilComponent){  }
-  constructor(private router:Router, private toastr:ToastrService){
+  constructor(private mensaje:ToastrService){}
+  saludo():void{
+    this.mensaje.success('Hola','En buena hora')
   }
-  ngOnInit():void{
-     
+  ngOnInit(): void {
+
   }
 }
