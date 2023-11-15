@@ -52,10 +52,18 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { DatePipe } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CaruselComponent } from './carusel/carusel.component';
+import { BotonesComponent } from './botones/botones.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 const router:Routes=[];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CaruselComponent,
+    BotonesComponent,
+    UsuarioComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +73,7 @@ const router:Routes=[];
     NgbModule,
     MatSliderModule,
     MatListModule,
+    FontAwesomeModule,
     MatIconModule,
     LayoutModule,
     MatToolbarModule,
@@ -111,7 +120,8 @@ const router:Routes=[];
     MaterialFileInputModule,
     CdkTreeModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

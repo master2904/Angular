@@ -7,10 +7,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.scss']
   })
 export class AppComponent implements OnInit{
-  constructor(private mensaje:ToastrService){}
-  saludo():void{
-    this.mensaje.success('Hola','En buena hora')
-  }
+  constructor(){}
+
   ngOnInit(): void {
 
   }
