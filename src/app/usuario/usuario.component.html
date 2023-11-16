@@ -1,1 +1,29 @@
-<p>usuario works!</p>
+<h3>Usuarios</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ci</th>
+      <th scope="col">Opcion</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let usuario of usuarios;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.ci}}</td>
+        <td>
+          <button class="btn btn-success btn-sm">
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button class="btn btn-danger btn-sm">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+        </td>
+    </tr>
+  </tbody>
+</table>
+

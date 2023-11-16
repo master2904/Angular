@@ -56,6 +56,7 @@ import { CaruselComponent } from './carusel/carusel.component';
 import { BotonesComponent } from './botones/botones.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
+import { MenuComponent } from './menu/menu.component';
 const router:Routes=[];
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ const router:Routes=[];
     CaruselComponent,
     BotonesComponent,
     UsuarioComponent,
-    CrearUsuarioComponent
+    CrearUsuarioComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
