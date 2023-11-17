@@ -57,6 +57,7 @@ import { BotonesComponent } from './botones/botones.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { MenuComponent } from './menu/menu.component';
+import { ClienteComponent } from './cliente/cliente.component';
 const router:Routes=[];
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ const router:Routes=[];
     BotonesComponent,
     UsuarioComponent,
     CrearUsuarioComponent,
-    MenuComponent
+    MenuComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -123,7 +125,8 @@ const router:Routes=[];
     CdkTreeModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

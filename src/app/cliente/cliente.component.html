@@ -1,4 +1,4 @@
-<h3>Usuarios</h3>
+<h3>clientes</h3>
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -9,12 +9,12 @@
     </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let usuario of usuarios;let i=index">
+      <tr *ngFor="let cliente of clientes;let i=index">
         <td>{{i+1}}</td>
-        <td>{{usuario.nombre}}</td>
-        <td>{{usuario.apellido}}</td>
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.ci}}</td>
         <td>
-          <button class="btn btn-success btn-sm" (click) ="update(usuario)">
+          <button class="btn btn-success btn-sm">
             <mat-icon>edit</mat-icon>
           </button>
 
