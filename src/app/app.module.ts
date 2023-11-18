@@ -58,6 +58,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { MenuComponent } from './menu/menu.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { CrearClienteComponent } from './cliente/crear-cliente/crear-cliente.component';
 const router:Routes=[];
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ const router:Routes=[];
     UsuarioComponent,
     CrearUsuarioComponent,
     MenuComponent,
-    ClienteComponent
+    ClienteComponent,
+    CrearClienteComponent
   ],
   imports: [
     BrowserModule,
