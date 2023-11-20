@@ -32,9 +32,8 @@ export class ClienteComponent implements OnInit {
   update(cliente){
 
   }
-  abrirDialogo(){
-    let  data=[]
-    let dialogo=this.dialog.open(CrearClienteComponent,{data})
-    // dialogo.afterClosed()
+  abrirDialogo() {
+    let data;
+    const dialogo1 = this.dialog.open(CrearClienteComponent, {data});
   }
 }
