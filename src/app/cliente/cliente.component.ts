@@ -35,5 +35,18 @@ export class ClienteComponent implements OnInit {
   abrirDialogo() {
     let data;
     const dialogo1 = this.dialog.open(CrearClienteComponent, {data});
+    dialogo1.afterClosed().subscribe(art=>{
+      if(art==undefined)
+        this.mensaje.info('Operacion Cancelada')
+      else{
+        this.clienteServ.nuevo(art.value).subscribe((data:any)=>{
+          this.clientes=data
+          this.mensaje.success('Exito','Cliente Registrado')
+        },
+        error=>{
+          this.mensaje.error('Error','Error de conexion 500')
+        })
+      }
+    })
   }
 }

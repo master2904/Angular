@@ -1,12 +1,20 @@
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+<h2 mat-dialog-title>Crear Cliente</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="agregar">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Juan Visney" formControlName="nombre" name="nombre">
+      <mat-error>{{error_nombre()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput placeholder="Choque Mamani" formControlName="apellido" name="apellido">
+      <mat-error>{{error_apellido()}}</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="agregar" [disabled]="!agregar.valid" class="btn btn-danger">Guardar</button>
+</mat-dialog-actions>
